@@ -3,11 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScriptPurchase.TC_21SelectUser">
+      <class name="com.scenario.Vtiger.CreateAContactWithExistingOrganisation">
         <methods>
-          <include name="tc_21SelectUser"/>
+          <include name="test"/>
+          <include name="connectToDB"/>
+          <include name="loginToApp"/>
+          <include name="launchBrowser"/>
+          <include name="closeDB"/>
+          <include name="logoutApp"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- testScriptPurchase.TC_21SelectUser -->
+      </class> <!-- com.scenario.Vtiger.CreateAContactWithExistingOrganisation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

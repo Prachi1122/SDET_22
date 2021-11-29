@@ -9,7 +9,7 @@ import pom.Home;
 import pom.PurchaseOrder;
 
 public class TC_21 extends BaseClass {
-	@Test
+	@Test(groups = {"smoketest"})
 	public void tc_21() throws Throwable {
 		Home h=new Home(driver);
 		h.homePage(driver);

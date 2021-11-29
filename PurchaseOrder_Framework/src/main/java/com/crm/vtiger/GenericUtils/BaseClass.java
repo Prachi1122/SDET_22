@@ -3,6 +3,7 @@ package com.crm.vtiger.GenericUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -25,13 +26,14 @@ public WebDriverUtility wLib= new WebDriverUtility();
 public ExcelUtility eLib = new ExcelUtility();
 public JavaUtility jLib = new JavaUtility();
 public WebDriver driver;
+public static WebDriver sdriver=null;
 
-@BeforeSuite
+@BeforeSuite(groups = {"smoketest"})
 public void connectToDB() {
 //dLib.connectToDB();
 System.out.println("===========DB Connection Sucessfull=============");
 }
-@BeforeClass
+@BeforeClass(groups = {"smoketest"})
 public void launchBrowser() throws Throwable {
 	//read data from property file
 	String BROWSER = fLib.getPropertyKeyValue("browser");
@@ -45,12 +47,16 @@ public void launchBrowser() throws Throwable {
 	else {
 		System.out.println("Invalid Browser Name");
 	}
-	System.out.println("===========Browser Launch Sucessfilly===========");
+	WebDriverListner regDriver=new WebDriverListner();
+	 EventFiringWebDriver eventDriver = new EventFiringWebDriver(driver);
+	eventDriver.register(regDriver);
+	System.out.println("===========Browser Launch Sucessfully===========");
 	wLib.maximiseWindow(driver);
 	wLib.waitUntilPageLoad(driver);
 	driver.get(URL);
+	sdriver=driver;
 }
-@BeforeMethod
+@BeforeMethod(groups = {"smoketest"})
 public void loginToApp() throws Throwable {
 //read data from property file
 	String USERNAME = fLib.getPropertyKeyValue("username");
@@ -60,19 +66,19 @@ public void loginToApp() throws Throwable {
 	l.loginToApp(driver);
 	System.out.println("=============login sucessfull===========");
 }
-@AfterMethod
+@AfterMethod(groups = {"smoketest"})
 public void logoutApp() {
 	//sign out of home page
 	Home h= new Home(driver);
 	h.signOut(driver);
 	System.out.println("==========sign out sucessfull==========");
 }
-@AfterClass
+@AfterClass(groups = {"smoketest"})
 public void closeBrowser() {
 	driver.close();
 	System.out.println("=====Browser close sucessfull============");
 }
-@AfterSuite
+@AfterSuite(groups = {"smoketest"})
 public void closeDB() {
 	//dLib.closeDB();
 	System.out.println("=============DB connection closed sucessfully======");

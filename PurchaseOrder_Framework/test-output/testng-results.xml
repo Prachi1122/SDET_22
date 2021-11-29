@@ -2,16 +2,40 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16607" started-at="2021-10-12T10:48:17 IST" finished-at="2021-10-12T10:48:34 IST">
+  <suite name="Default suite" duration-ms="27165" started-at="2021-11-29T17:18:33 IST" finished-at="2021-11-29T17:19:00 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16607" started-at="2021-10-12T10:48:17 IST" finished-at="2021-10-12T10:48:34 IST">
-      <class name="testScriptPurchase.TC_21SelectUser">
-        <test-method status="PASS" signature="tc_21SelectUser()[pri:0, instance:testScriptPurchase.TC_21SelectUser@33c7e1bb]" name="tc_21SelectUser" duration-ms="16558" started-at="2021-10-12T10:48:17 IST" finished-at="2021-10-12T10:48:34 IST">
+    <test name="Default test" duration-ms="27165" started-at="2021-11-29T17:18:33 IST" finished-at="2021-11-29T17:19:00 IST">
+      <class name="com.scenario.Vtiger.CreateAContactWithExistingOrganisation">
+        <test-method status="PASS" signature="connectToDB()[pri:0, instance:com.scenario.Vtiger.CreateAContactWithExistingOrganisation@4c762604]" name="connectToDB" is-config="true" duration-ms="10" started-at="2021-11-29T17:18:33 IST" finished-at="2021-11-29T17:18:33 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tc_21SelectUser -->
-      </class> <!-- testScriptPurchase.TC_21SelectUser -->
+        </test-method> <!-- connectToDB -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.scenario.Vtiger.CreateAContactWithExistingOrganisation@4c762604]" name="launchBrowser" is-config="true" duration-ms="3385" started-at="2021-11-29T17:18:33 IST" finished-at="2021-11-29T17:18:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="loginToApp()[pri:0, instance:com.scenario.Vtiger.CreateAContactWithExistingOrganisation@4c762604]" name="loginToApp" is-config="true" duration-ms="3189" started-at="2021-11-29T17:18:36 IST" finished-at="2021-11-29T17:18:40 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApp -->
+        <test-method status="PASS" signature="test()[pri:0, instance:com.scenario.Vtiger.CreateAContactWithExistingOrganisation@4c762604]" name="test" duration-ms="18509" started-at="2021-11-29T17:18:40 IST" finished-at="2021-11-29T17:18:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="logoutApp()[pri:0, instance:com.scenario.Vtiger.CreateAContactWithExistingOrganisation@4c762604]" name="logoutApp" is-config="true" duration-ms="1938" started-at="2021-11-29T17:18:58 IST" finished-at="2021-11-29T17:19:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.scenario.Vtiger.CreateAContactWithExistingOrganisation@4c762604]" name="closeBrowser" is-config="true" duration-ms="95" started-at="2021-11-29T17:19:00 IST" finished-at="2021-11-29T17:19:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="closeDB()[pri:0, instance:com.scenario.Vtiger.CreateAContactWithExistingOrganisation@4c762604]" name="closeDB" is-config="true" duration-ms="1" started-at="2021-11-29T17:19:00 IST" finished-at="2021-11-29T17:19:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDB -->
+      </class> <!-- com.scenario.Vtiger.CreateAContactWithExistingOrganisation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

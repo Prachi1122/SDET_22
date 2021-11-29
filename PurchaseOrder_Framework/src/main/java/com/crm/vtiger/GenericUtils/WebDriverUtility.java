@@ -105,7 +105,8 @@ public  class WebDriverUtility {
 		while(it.hasNext()) {
 			String winId = it.next();
 			String title = driver.switchTo().window(winId).getTitle();
-			if(title.contains(partialWinTitle)) {
+			if(title.contains(partialWinTitle))
+			{
 				break;
 			}
 		}
